@@ -4,14 +4,14 @@
         <h2>
             Counter Component page
         </h2>
-        <button>+1</button>
-        <button>-1</button>
-        <button>Reset</button>
+        <button (click)="increaseBy(1)">+1</button>
+        <button (click)="increaseBy(-1)">-1</button>
+        <button (click)="reset()">Reset</button>
         <h3>
-            El valor del contador es: 
+            El valor del contador es: {{contador}}
         </h3>
         <h3>
-            El valor del contador con señal es: 
+            El valor del contador con señal es: {{contadorSignal()}}
         </h3>
     </article>
 </section>
