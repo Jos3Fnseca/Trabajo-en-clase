@@ -8,17 +8,17 @@
 </head>
 <body>
     <h1>
-    {{name}}
+    {{name()}}
 </h1>
 <div>
     <table class="table table-bordered">
         <tr>
             <td>Nombre: </td>
-            <td> {{name}} </td>
+            <td> {{name()}} </td>
         </tr>
         <tr>
             <td>Edad: </td>
-            <td> {{age}} </td>
+            <td> {{age()}} </td>
         </tr>
         <tr>
             <td>Metodo: </td>
@@ -26,17 +26,17 @@
         </tr>
         <tr>
             <td>Capitalizado: </td>
-            <td> {{name.toUpperCase()}} </td>
+            <td> {{name().toUpperCase()}} </td>
         </tr>
     </table>
 </div>
-<button (click)="cname('Ben')" class="btn btn-primary mx-2">
+<button class="btn btn-primary mx-2" (click)="changeHero()">
     Cambiar Nombre
 </button>
-<button (click)="cage(27)" class="btn btn-primary">
+<button class="btn btn-primary" (click)="changeAge()">
     Cambiar Edad
 </button>
-<button (click)="reset()" class="btn btn-primary mx-2">
+<button class="btn btn-primary mx-2" (click)="resetForm()">
     Reset
 </button>
 <!--TAREA Mostrar el componente si escribe localhost:4200/hero-->

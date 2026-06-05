@@ -1,27 +1,26 @@
 import { Component, signal } from "@angular/core";
 
 @Component({
-    selector: 'app-hero-page',
     templateUrl: "./hero-page.component.html",
     styleUrl: "./hero-page.component.css",
 })
 
 export class HeroPageComponent {
-    name: string = "peter";
-    age = 16;
-    descripcion: string= "La descripcion de peter es: alto, delgado, pelo castaño.";
+    name = signal("Tony Stark");
+    age = signal(47);
     getHeroDescription(){
-         return this.descripcion;
+         return '${this.name()} - ${this.age()}';
     }
 
-    cname(Newname: string){
-     this.name = Newname;
+    changeHero(){
+     this.name.set('Spiderman');
+     this.age.set(16);
     }
-    cage(newage: number){
-     this.age = newage;
+    changeAge(){
+     this.age.set(27);
     }
-    reset(){
-        this.age = 16;
-        this.name = "peter"
+    resetForm(){
+        this.name.set('Tony Stark');
+        this.age.set(47);
     }
 }
