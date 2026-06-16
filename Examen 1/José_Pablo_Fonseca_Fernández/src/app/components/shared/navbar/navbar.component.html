@@ -1,0 +1,22 @@
+<style>
+    nav{
+        display: flex;
+        justify-content: space-around;
+        background-color:darkcyan;
+        color: #ffff;
+        padding: 10px;
+        font-size: 25px;
+    }
+    nav a{
+        color: #ffff;
+        text-decoration: none;
+    }
+    nav a.active{
+        color:black;
+    }
+</style>
+<nav>
+    <a href="" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Ver Listado</a>
+    <a href="" routerLink="/crear" routerLinkActive="active">Crear</a>
+    <a href=""routerLink="/administrar" routerLinkActive="active">Administrar</a>
+</nav>

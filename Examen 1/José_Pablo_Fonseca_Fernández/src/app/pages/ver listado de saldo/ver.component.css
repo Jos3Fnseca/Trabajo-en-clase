@@ -1,0 +1,52 @@
+section{
+    width: 100%;
+    height: 300px;
+    /*background: #020024;*/
+    /*background:linear-gradient(90deg, rgba(2,0,36,1)0%,rgba(9,9,121,1)35%,(rgba(0,212,255,1)100%));*/
+    align-items: center;
+}
+article{
+    width: 25%;
+    height: 100%;
+    margin: 0 auto;
+    color: black;
+    text-align: center;
+    padding-top: 100px ;
+    justify-content: center;
+     background: linear-gradient(360deg, rgba(201, 201, 201, 1) 0%, rgba(255, 255, 255, 1) 53%);
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+.presu{
+    width: 150px;
+    height: fit-content;
+    background-color:#D6E2D8;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    border-radius: 5px;
+}
+.restante{
+    width:150px;
+    height: fit-content;
+    background-color:lightgray;
+    gap: 20px;
+    text-align: center;
+    display: flex;
+    border-radius: 5px;
+}
+.Supermercado{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+h2{
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
