@@ -1,5 +1,7 @@
 import { Component, signal } from "@angular/core";
-import { CharacterFormComponent } from "../../components/character-form/charcater.form,component";
+import { CharacterFormComponent } from "../../components/character-form/charcater-form.component";/*ruteo, para que el archivo
+conozca donde esta*/
+import { CharacterListComponent } from "../../components/character-list/character-list.component";
 interface Character{
     id:number;
     name:string;
@@ -8,7 +10,7 @@ interface Character{
 
 @Component({
     selector: 'app-anime-super',
-    imports:[CharacterFormComponent],
+    imports:[CharacterFormComponent,CharacterListComponent],/*Parte logica */
     templateUrl: './anime-super-page.component.html'
 })
 export class AnimeSuperComponent{
@@ -20,8 +22,10 @@ export class AnimeSuperComponent{
         {id:3, name:'Piccolo', power:3000},
         {id:4, name:'Yamcha', power:500},
     ])
-    addCharacter(){
-        console.log(this.name(),this.power());
+    addCharacter(character:Character){
+        this.characters.update((list)=>[...list,character]);
+
+        /*console.log(this.name(),this.power());
         if(!this.name() || !this.power() || this.power() <= 0){
             return;
         }
@@ -36,5 +40,6 @@ export class AnimeSuperComponent{
     resetFields(){
         this.name.set(''),
         this.power.set(0)
-    }
+    }*/
+}
 }
