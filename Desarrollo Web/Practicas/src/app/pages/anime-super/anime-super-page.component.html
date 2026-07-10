@@ -3,12 +3,17 @@
 <section class="row">
     <div class="col-12 col-sm-6">
         <!--Inicia componente de formulario-->
-       <app-character-form/>
+       <app-character-form
+       (newCharacter)="variosService.addCharacter( $event)"
+       />
         <!--Finaliza componente del formulario-->
     </div>
     <div class="col-12 col-sm-6">
         <!--Inicia Lista-->
-        <app-character-list/>
+        <app-character-list
+        listName = "Listado de Personaje"
+        [characters]="variosService.characters()"
+        />
         <!--Termina la lista-->
     </div>
 </section>

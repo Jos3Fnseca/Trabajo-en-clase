@@ -1,20 +1,30 @@
-import { Component, signal } from "@angular/core";
+import { Component, inject, signal } from "@angular/core";
 import { CharacterFormComponent } from "../../components/character-form/charcater-form.component";/*ruteo, para que el archivo
 conozca donde esta*/
 import { CharacterListComponent } from "../../components/character-list/character-list.component";
+import { VariosService } from "../../Service/varios.service";
+/*
 interface Character{
     id:number;
     name:string;
     power:number;
 }
-
+*/
 @Component({
     selector: 'app-anime-super',
     imports:[CharacterFormComponent,CharacterListComponent],/*Parte logica */
     templateUrl: './anime-super-page.component.html'
 })
 export class AnimeSuperComponent{
-    name = signal('');
+    //Inyectar servicio de forma tradicional
+   /* constructor(
+        public variosService: VariosService
+    ){}*/
+   //Inyectar servicio de forma más funcional y moderna
+   public variosService = inject(VariosService);
+
+    //Forma antigua de hacerlo
+    /*name = signal('');
     power = signal(0);
     characters = signal<Character[]>([
         {id:1, name:'Goku', power:9001},
@@ -25,7 +35,7 @@ export class AnimeSuperComponent{
     addCharacter(character:Character){
         this.characters.update((list)=>[...list,character]);
 
-        /*console.log(this.name(),this.power());
+        console.log(this.name(),this.power());
         if(!this.name() || !this.power() || this.power() <= 0){
             return;
         }
@@ -40,6 +50,6 @@ export class AnimeSuperComponent{
     resetFields(){
         this.name.set(''),
         this.power.set(0)
-    }*/
-}
+    }
+}*/
 }
