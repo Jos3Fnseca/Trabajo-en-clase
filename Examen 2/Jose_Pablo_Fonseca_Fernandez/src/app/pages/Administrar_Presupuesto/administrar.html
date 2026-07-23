@@ -1,0 +1,19 @@
+
+
+
+    <div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+       <app-ingresar
+       (newGasto)="variosService.addGasto($event)"/>
+    </div>
+
+    <div class="col">
+      <app-listar
+      listgasto = "Listado de Gastos"
+      [gasto]="variosService.GastosA()"
+      [restante]="variosService.restante()"
+      />
+    </div>
+  </div>
+</div>

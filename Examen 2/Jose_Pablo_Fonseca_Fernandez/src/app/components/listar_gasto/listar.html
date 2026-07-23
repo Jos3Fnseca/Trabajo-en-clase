@@ -1,0 +1,41 @@
+
+
+<section>
+    <article style="width: 500px;">
+        <h2>
+            {{listgasto()}}
+        </h2>
+        <div class="row mb-3">
+            <div class="col">
+                <p>Presupuesto</p>
+                <p style="font-weight: bold;">$3000</p>
+            </div>
+            <div class="col" #restantes>
+                <p>Restante</p>
+                <p style="font-weight: bold;">${{restanteReal()}}</p>
+            </div>
+        </div>
+        <ul>
+            
+            @for (gastos of gasto(); track gastos.nombre) {
+
+            
+                <li>
+                    <span> {{gastos.nombre}}</span>
+                    <strong> ${{gastos.gasto}}</strong>
+                </li>
+                @if(restanteReal() <= 0) {
+                    <strong class="text-danger"> 
+                        ${{ gastos.gasto }} (¡Excede el presupuesto!) 
+                    </strong>
+                }
+            }
+        </ul>
+        <!--
+        <div class="Supermercado">
+            <p style="font-weight: bold">Supermercado</p>
+            <p style="background-color:dimgrey; font-weight: bold;border-radius: 50px;color: white;width: 80px;">$1000</p>
+        </div> -->
+    </article>
+</section>
+

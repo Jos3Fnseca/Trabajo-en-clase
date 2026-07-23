@@ -1,0 +1,41 @@
+
+
+
+<section>
+    <article style="width: 500px;">
+        <h2>
+            Ingresar Gasto
+        </h2>
+        <div class="row mb-3">
+            <div class="col">
+                <p>Gasto</p>
+                <input
+                 type="text" 
+                 placeholder="Comida" 
+                 class="form-control"
+                 [value]="nombre()"
+                 (change)="nombre.set(txtNombre.value)"
+                 (input)="nombre.set(txtNombre.value)"
+                 #txtNombre
+                 >
+                <p>Cantidad</p>
+                <input 
+                type="number" 
+                placeholder="0" 
+                class="form-control"
+                [value]="gasto()"
+                (input)="gasto.set(+txtGasto.value)"
+                #txtGasto
+                >
+            </div>
+        </div>
+        <button class="btn btn-secondary" 
+        (click)="addGasto(); 
+        agregarPresupuesto(txtGasto.value,txtNombre.value);
+        "
+        >AGREGAR GASTO</button>
+
+    </article>
+</section>
+
+ 

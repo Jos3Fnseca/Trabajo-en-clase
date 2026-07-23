@@ -1,0 +1,41 @@
+<style>
+    nav{
+        display: flex;
+        justify-content: space-around;
+        background-color:rgb(114, 212, 212);
+        color: #ffff;
+        padding: 10px;
+        font-size: 25px;
+
+    }
+    nav a{
+        color: #ffff;
+        text-decoration: none;
+    }
+    nav a.active{
+        color:rgb(37, 35, 35);
+    }
+    div{
+    gap: 20px;
+    text-align: center;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 25px;
+    }
+    img{
+        height: 60px;
+        width: 150px; 
+        border-radius: 10px;
+        justify-content: center;
+        margin: 25px;
+    }
+</style>
+<nav>
+        <img src="https://www.inicionet.com/wp-content/uploads/2024/06/angular-866x423.webp" alt="">
+    <div >
+    <a href="" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Administrar</a>
+    <a href=""routerLink="/crear" routerLinkActive="active">Crear</a>
+    </div>
+
+</nav>
