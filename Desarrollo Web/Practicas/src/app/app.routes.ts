@@ -7,7 +7,7 @@ import { AnimeSuperComponent } from './pages/anime-super/anime-super-page.compon
 export const routes: Routes = [
     {
         /*Si path esta vacio, aparece component */
-        path: '',/*Se pone la direccion que va a cargar el componente.Ej www.jfonseca.com/productos(o mombre de la ventana)*/
+        path: 'https://desarrollopracticas.netlify.app/',/*Se pone la direccion que va a cargar el componente.Ej www.jfonseca.com/productos(o mombre de la ventana)*/
         component: CounterPageComponent,
     },
     {
